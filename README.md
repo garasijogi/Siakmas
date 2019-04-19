@@ -1,6 +1,6 @@
 # Sistem Informasi Akuntansi Masjid
 
-Proyek software buat KKN dengan codeigniter.
+Web App akuntansi dengan codeigniter.
 
 Developers gunakan branch **develop**.
 
