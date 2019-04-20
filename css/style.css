@@ -1,6 +1,7 @@
 body {
     background-color: white !important;
 }
+
 ul ul li a {
     margin-left: 9px;
 }
@@ -8,46 +9,48 @@ ul ul li a {
 /*----------------------------------------------------------------------------------------------------*/
 /*Modul Laporan*/
 
-div .laporan{
+div .laporan {
     overflow-y: auto;
 }
 
 /*Dekorasi Laporan*/
-.indent1{
+.indent1 {
     margin-left: 2%;
 }
 
-.indent2{
+.indent2 {
     margin-left: 4%;
 }
 
-.judul-laporan{
+.judul-laporan {
     text-decoration: bold;
 }
 
 /*PERHATIAN!!! style ini mungkin mempengaruhi modul lain*/
-@media print{
+@media print {
     body * {
         visibility: hidden;
     }
 
-    #sidebar{
+    #sidebar {
         visibility: hidden;
     }
 
-    #section-to-print, #section-to-print *{
+    #section-to-print,
+    #section-to-print * {
         visibility: visible;
     }
 
-    #section-to-print{
+    #section-to-print {
         position: absolute;
         left: 0;
         top: 0;
     }
 }
+
 /*-----------------------------------------------------------------------------------------------------*/
 
-.center{
+.center {
     text-align: center;
 }
 
@@ -55,57 +58,69 @@ div .laporan{
     background-color: teal !important;
     border-color: teal !important;
 }
+
 .breadcrumb {
     background-color: teal !important;
     color: white !important;
     margin-left: 50px !important;
     width: 1260px !important;
 }
+
 .breadcrumb-item {
     color: white !important;
-    
+
 }
+
 #judulJenis {
     margin-left: 100px;
 }
+
 .kartu input {
     opacity: 0;
 }
+
 .breadcrumb-item+.breadcrumb-item::before {
-  margin-right: 0.5rem !important;
-  color: white !important;
+    margin-right: 0.5rem !important;
+    color: white !important;
 }
+
 .mr-5 {
     color: black !important;
 }
+
 .card-body {
     background-color: white !important;
 }
 
 .breadcrumb-item.active {
-  color: white !important;
-  font-weight: bold;
+    color: white !important;
+    font-weight: bold;
 }
-.card-body-icon i{
+
+.card-body-icon i {
     color: black !important;
 }
-.navbar
-{
-border-bottom:1px solid grey;
+
+.navbar {
+    border-bottom: 1px solid grey;
 }
+
 #navbarTop #siteName {
     margin-left: 35px;
     font-weight: bold;
 }
+
 #navbarTop i {
     color: white !important;
 }
+
 .navbar-fixed {
     position: fixed !important;
     left: 0;
     top: 0;
     width: 100%;
 }
+
 .wrapper {
     display: flex;
     align-items: stretch;
@@ -239,8 +254,7 @@ ul li span {
     margin-left: 20px;
 }
 
-section{
-}
+section {}
 
 /* kontener semua */
 .container-fluid {
