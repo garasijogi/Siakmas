@@ -2,10 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Penerimaan_terikat extends CI_Controller {
-
+	
 /*HOME*/
 	public function index()
 	{
+		$this->load->helper("security");
 		$this->load->view('admin/penerimaan_terikat_v');
 	}
 
@@ -14,6 +15,8 @@ class Penerimaan_terikat extends CI_Controller {
 	{
 		$data= $this->mod->GetTable('tr01_penerimaanterikat');
 		$data2= $this->mod->GetTable('infotr01_penerimaanterikat');
+		// $data= $this->security->xss_clean('data');
+		// $data2= $this->security->xss_clean('data2');
 
 		$this->load->view('admin/penerimaan_terikat/peribadatan/infaq_kotak_jumat_v', array('data'=>$data, 'data2'=>$data2));
 	}
@@ -22,7 +25,8 @@ class Penerimaan_terikat extends CI_Controller {
 	{
 		$data= $this->mod->GetTable('tr01_penerimaanterikat');
 		$data2= $this->mod->GetTable('infotr01_penerimaanterikat');
-
+		// $data= $this->security->xss_clean('data');
+		// $data2= $this->security->xss_clean('data2');
 		$this->load->view('admin/penerimaan_terikat/peribadatan/infaq_phbi_v', array('data'=>$data, 'data2'=>$data2));
 	}
 
@@ -122,6 +126,7 @@ class Penerimaan_terikat extends CI_Controller {
 
 		$tgl = $this->input->post('tanggal');
 
+
 		$pemberi = $this->input->post('pemberi');
 
 		$nominal = $this->input->post('nominal');
@@ -153,7 +158,9 @@ class Penerimaan_terikat extends CI_Controller {
 			$data = array('id_tr'=>$id_tr, 'id_infotr'=>$id_infotr, 'kode_sub'=>$kode_sub,'kode_akun'=>$kode_akunD,'debit'=>$nominal); //data yang akan di insert
 			$data2 = array('id_tr'=>$id_tr+1, 'id_infotr'=>$id_infotr, 'kode_sub'=>$kode_sub, 'kode_akun'=>$kode_akunK, 'kredit'=>$nominal);
 			$info = array('id_infotr'=>$id_infotr, 'tanggal'=>$tgl, 'keterangan'=>$keterangan, 'jenis'=>$jenis, 'pemberi'=>$pemberi, 'p_jenis'=>$p_jenis);
-
+			// $data= $this->security->xss_clean('data');
+			// $data2= $this->security->xss_clean('data2');
+			// $info= $this->security->xss_clean('info');
 			$this->mod->InsertData('tr01_penerimaanterikat', $data);
 			$this->mod->InsertData('tr01_penerimaanterikat', $data2);
 			$this->mod->InsertData('infotr01_penerimaanterikat', $info); //memasukan data melalui fungsi insertdata pad models mod.php

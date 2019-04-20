@@ -133,13 +133,13 @@ class CI_Security {
 	 * @var	array
 	 */
 	protected $_never_allowed_str =	array(
-		'document.cookie' => '[removed]',
-		'(document).cookie' => '[removed]',
-		'document.write'  => '[removed]',
-		'(document).write'  => '[removed]',
-		'.parentNode'     => '[removed]',
-		'.innerHTML'      => '[removed]',
-		'-moz-binding'    => '[removed]',
+		'document.cookie' => ' ',
+		'(document).cookie' => ' ',
+		'document.write'  => ' ',
+		'(document).write'  => ' ',
+		'.parentNode'     => ' ',
+		'.innerHTML'      => ' ',
+		'-moz-binding'    => ' ',
 		'<!--'            => '&lt;!--',
 		'-->'             => '--&gt;',
 		'<![CDATA['       => '&lt;![CDATA[',
@@ -487,7 +487,7 @@ class CI_Security {
 
 			if (preg_match('/script|xss/i', $str))
 			{
-				$str = preg_replace('#</*(?:script|xss).*?>#si', '[removed]', $str);
+				$str = preg_replace('#</*(?:script|xss).*?>#si', ' ', $str);
 			}
 		}
 		while ($original !== $str);
@@ -1051,7 +1051,7 @@ class CI_Security {
 
 		foreach ($this->_never_allowed_regex as $regex)
 		{
-			$str = preg_replace('#'.$regex.'#is', '[removed]', $str);
+			$str = preg_replace('#'.$regex.'#is', ' ', $str);
 		}
 
 		return $str;

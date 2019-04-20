@@ -51,6 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
+$route['403_override'] = '';
+$route['not_auth'] = ''; //if user hasnt been authenticated, auto redirect here
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin/overview';

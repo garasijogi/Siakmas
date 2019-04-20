@@ -74,7 +74,7 @@ class CI_FTP {
 	 *
 	 * @var	int
 	 */
-	public $port = 21;
+	public $port = ;
 
 	/**
 	 * Passive mode flag
