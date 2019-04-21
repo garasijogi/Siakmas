@@ -5,7 +5,7 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url('css/style.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/bootstrap.min.css') ?>">
     <!-- <link rel="stylesheet" href="css/materialize.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     

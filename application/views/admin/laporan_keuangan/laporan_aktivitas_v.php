@@ -2,15 +2,16 @@
 <html>
 <head class="noprint">
 	<?php $this->load->view("admin/_partials/head.php")?>
+    <title><?php echo($xjenis="Laporan Aktivitas")?></title>
 </head>
     <?php $this->load->view('admin/_partials/print.php')?>
 <body>
 
-    <!-- Navbar dan Sidebar -->
-    <div class="noprint">
-        <?php  $this->load->view("admin/_partials/navbar.php") ?>
-        <div class="wrapper">
-            <?php $this->load->view("admin/_partials/sidebar.php")  ?>
+<!-- Navbar dan Sidebar -->
+<div class="noprint">
+    <?php  $this->load->view("admin/_partials/navbar.php") ?>
+    <div class="wrapper">
+        <?php $this->load->view("admin/_partials/sidebar.php")  ?>
             
         <!-- 
             karena ini halaman overview (home), kita matikan partial breadcrumb.
@@ -18,13 +19,16 @@
             silahkan hilangkan komentar (//) di tag PHP di bawah.
         -->
         <?php //$this->load->view("admin/_partials/breadcrumb.php") ?>
-        <?php $this->load->view("admin/_partials/modal.php") ?>
-        <?php $this->load->view("admin/_partials/js.php") ?>
     </div>
 </div>
 
+<!-- Breadcrumb -->
+<div class="container-fluid navbar-fixed">
+    <?php $this->load->view("admin/_partials/breadcrumb.php");?>
+</div>
+
 <section class="container-fluid">
-	<!-- <div style="margin-top: 75px;"> -->
+
         <div class="noprint">
             <a class="btn btn-custom text-white form-control" style="background-color:teal;font-weight: bold; margin-left: 15px; width: 70px;" href="javascript:window.print()">
                         Print</a>
@@ -201,5 +205,8 @@
     </div>
 </section>
 
+<!-- js -->
+<?php $this->load->view("admin/_partials/modal.php") ?>
+<?php $this->load->view("admin/_partials/js.php") ?>
 </body>
 </html>
