@@ -254,8 +254,6 @@ ul li span {
     margin-left: 20px;
 }
 
-section {}
-
 /* kontener semua */
 .container-fluid {
     max-width: 90%;
@@ -416,4 +414,43 @@ button.list-group-item {
     position: absolute;
     transform: translate(9.5px, -14%) !important;
     opacity: 1;
+}
+
+/* Mock1ng - 2.20AM, 23 April */
+/* Profil Menus */
+.nav-profil ul a {
+    display: block;
+    list-style: none;
+    float: left;
+    text-decoration: none;
+    background-color: #fff;
+    width: 200px;
+    height: 100px;
+    margin: 0 10px;
+    border-radius: 25px;
+    color: #000;
+    font-size: 27px;
+    text-align: center;
+    margin: 0px 30px;
+    transition: 0.2s;
+}
+
+.nav-profil ul a:hover,
+.nav-profil ul a:active {
+    background-color: teal;
+    color: #fff;
+}
+
+.nav-profil ul li {
+    position: relative;
+    /* background-color: red; */
+    transform: translate(-50%, -50%);
+    top: 47%;
+    left: 50%;
+}
+
+/* Profil */
+.tabel-profil {
+    width: 70%;
+
 }
