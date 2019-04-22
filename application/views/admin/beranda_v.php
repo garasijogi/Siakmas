@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<?php  $this->load->view("admin/_partials/head.php")?>
+    <?php $this->load->view("admin/_partials/head.php")?>
 </head>
-
 <body>
 
+<!-- Sidebar dan Navbar -->
 <div>
     <?php  $this->load->view("admin/_partials/navbar.php") ?>
     <div class="wrapper">
@@ -23,12 +22,10 @@
     </div>
 </div>
 
-<section class="container-fluid ">
-    <!-- Icon Cards-->
-    
-    <!-- /.container-fluid -->
+
+<section class="container-fluid">
 </section>
 
-<?php $this->load->view("admin/_partials/js.php") ?>
+
 </body>
 </html>

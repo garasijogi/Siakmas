@@ -11,7 +11,7 @@
 		<?php if($is_active): ?>
 		<?php echo ucfirst($segment) ?>
 		<?php else: ?>
-		<a href="<?php echo site_url($url) ?>"><?php echo ucfirst($segment)." / " ?></a>
+		<a href="<?php echo site_url($url) ?>"><?php echo ucfirst($segment) ?></a>
 		<?php endif; ?>
 	</li>
 	<?php endforeach; ?>
