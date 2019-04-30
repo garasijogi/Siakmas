@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class penerimaan_input_m extends CI_Model {
+class penerimaan_m extends CI_Model {
 
 	public function __construct()
 	{
@@ -8,14 +8,21 @@ class penerimaan_input_m extends CI_Model {
 		
 	}
 
-	public function GetTable($tabel)
+	public function getAktLogic($kode_sub, $select){
+		$this->db->select($select);
+		$this->db->where('kode_sub', $kode_sub);
+		
+		return $this->db->get('akt_logic')->result_array();
+	}
 
-	{
+	public function ambilTabelView($kode_sub, $tabelInfo, $tabelTr){
+		$this->db->select('*');
+		$this->db->from($tabelInfo);
+		//join tabel infotr dan tr
+		$this->db->join($tabelTr, $tabelTr.'.id_infotr = '.$tabelInfo.'.id_infotr');
+		$this->db->where(array('kredit'=>'0', 'kode_sub'=>$kode_sub));
 
-		$data=$this->db->get($tabel);
-
-		return $data->result_array();
-
+		return $this->db->get()->result_array();
 	}
 
 	public function InsertData($tabel, $data) {
